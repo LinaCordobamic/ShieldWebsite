@@ -1,0 +1,99 @@
+@import './src/styles/shield/import.scss';
+
+footer {
+    background:$primario;
+    position:relative;
+    color:white;
+    padding-bottom:1em;
+   
+    @include tablet-down {text-align: center }
+    .site-logo {@include tablet-down {text-align: center;padding-top:20px}}
+    .site-logo > img {
+        width:120px;
+        height:auto;
+        position:absolute;
+        top: -50px;
+        @include laptop-down {
+            position:relative
+
+        }
+     
+    }
+
+    h2 {text-transform: uppercase;padding-top:2em;@include laptop-down {padding-top:0px}}
+    .content-text {font-size:70%;text-transform: uppercase;};
+    h4 {font-weight:300;text-transform: uppercase;padding-top:1em}
+
+    .topbar-foo {
+        background:white;
+        position: relative;
+        padding-left:4em;
+        height:70px;
+        @include laptop-down {display:none }
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top: 70px solid $primario;
+            border-right: 70px solid white;
+            width: 0;
+            -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            @media (max-width:1200px) {
+                left: -70px;
+            }
+            @include laptop-down {display:none}
+        }
+        ul {
+            @include flexbox(); 
+            padding:18px 0px; 
+            @include tablet-down {@include justify-content (center)};
+            @include smartphone {display: block!important}
+         
+        }
+        ul > li > a {
+            color:$negro;
+            text-transform: uppercase;
+            margin:10px 15px;
+            font-size:90%;
+            font-weight:400;
+            cursor: pointer;
+            @include transition-slow;
+            &:hover {color:$terciario}
+            @include laptop-down {color:white;margin:10px}
+        }
+
+                
+        .menu-block-right {
+            width: 600px;
+            right: -600px;
+            position:absolute;
+            background:white;
+            height:100%;
+            top:0;
+            @include laptop-down {display:none}
+        }
+    }
+
+    .iso {width:80px;height:auto;margin-top:2rem}
+    
+    .col-border {
+        @include flexbox();
+        @include align-items(center);
+        margin-top:5em;
+        padding-top:3em;
+        border-top:1px solid $borde;
+        @include tablet-down {display:block; .links {text-align: center!important}}
+        .copyright, .links {flex:1;font-size:90%;cursor: pointer;};
+        a {color:white;&:hover {text-decoration: underline}}
+        .links {
+            text-align: right; 
+            a {margin-right:10px}; 
+            a:last-child {margin-right:0px}
+        }
+    }
+
+}

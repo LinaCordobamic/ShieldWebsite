@@ -1,0 +1,17 @@
+@import './src/styles/shield/import.scss';
+
+.clientes {
+    padding:4rem 2rem; 
+    position: relative;
+    h2, h4 {color:$primario}
+    h2 {text-transform: uppercase;margin-bottom:10px;}
+    h4 {margin-bottom:20px}
+    p {color:$gris;line-height: 1.8}
+    .bg-image {
+        @include background-image("pic_banner.jpg", center, cover);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 600px;
+    }
+}

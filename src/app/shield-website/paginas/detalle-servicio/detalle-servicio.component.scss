@@ -1,0 +1,15 @@
+@import './src/styles/shield/import.scss';
+
+.detalle-servicio {
+    padding:5rem 0rem;
+    .row {@include flexbox();@include align-items(center)}
+    h4 {color:$terciario;margin-bottom:10px}
+    h2 {text-transform: uppercase;color:$primario;margin-bottom:20px}
+    p {color:$gris; line-height:1.8;text-align: justify}
+
+    .list-check {
+        margin-top:10px;
+        li {margin-bottom:5px}
+        i {font-size:25px;vertical-align:middle;color:$secundario;margin-right:10px}
+    }
+}

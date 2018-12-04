@@ -1,0 +1,12 @@
+@import './src/styles/shield/import.scss';
+
+
+.trabaja-con-nosotros {
+    padding:15rem 0rem 5rem 0rem;
+    @include tablet-down {padding:4rem 0rem}
+    .row {@include flexbox();@include align-items(center)}
+    h2 {text-transform: uppercase;margin-bottom:20px}
+    p {text-align: justify;line-height: 1.8;margin-bottom:20px}
+
+    img {@include tablet-down {margin-top:20px}}
+}

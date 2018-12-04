@@ -1,0 +1,41 @@
+$font-main: 'Roboto', sans-serif;
+$font-secondary: 'Oswald', sans-serif;
+
+:root {--font-size:1!important;}
+body { 
+    font-family: $font-secondary; 
+    font-size: calc(var(--font-size)* 1.2em)!important;
+    @include smartphone { 
+        font-size: calc(var(--font-size)* 1em)!important;
+    }
+
+}
+
+h1,h2,h3,h4,h5,h6,button {font-weight:800;font-family: $font-secondary};
+h1 {font-size:280%;@include desktop-up {font-size:350%};@include smartphone {font-size:200%}}
+h2 {font-size:180%;@include desktop-up {font-size:250%}@include smartphone {font-size:200%}}
+h3 {font-size:130%;@include desktop-up {font-size:150%}@include smartphone {font-size:130%}}
+button, .btn,  {font-weight:500;font-size:110%}
+.form-control {font-family: $font-main}
+p, label, li, small, span, a {
+    font-family: $font-secondary;
+    font-weight:300;
+    margin-bottom:0px;
+    @include smartphone {font-size:100%};
+}
+
+
+section {
+    p, label, li, small, span, a {
+        font-family: $font-main;
+        font-size:90%;
+        @include smartphone {font-size:100%};
+
+    }
+}
+ul, li 
+{
+    list-style: none; 
+    padding-left:0px
+}
+li {line-height: 1.8}

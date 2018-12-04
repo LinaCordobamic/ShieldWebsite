@@ -1,0 +1,289 @@
+
+
+
+        /*----------------------------
+        ---------- Mixins ---------
+        ----------------------------*/
+
+        @mixin big-desktop {
+            @media only screen and (min-width: 1681px) {
+            @content;
+            }
+        }
+
+
+        @mixin desktop-up {
+        @media only screen and (min-width: 1469px) {
+        @content;
+        }
+        }  
+        
+        
+        
+        @mixin desktop-down {
+            @media only screen and (max-width: 1468px) {
+            @content;
+            }
+            }
+
+        @mixin desktop {
+            @media only screen and (min-width: 1025px) and (max-width: 1680px) {
+            @content;
+            }
+        }
+
+        @mixin laptop-up {
+            @media (min-width: 992px) {
+            @content;
+            }
+        }
+  
+
+        @mixin laptop-down {
+            @media (max-width: 992px) {
+            @content;
+            }
+        }
+  
+        @mixin tablet {
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            @content;
+            }
+        }
+            
+        @mixin tablet-landscape {
+            @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            @content;
+            }
+        }
+
+        @mixin tablet-up {
+            @media (min-width: 768px) {
+            @content;
+            }
+        }
+
+        @mixin tablet-down {
+            @media (max-width: 768px) {
+            @content;
+            }
+        }
+  
+
+        @mixin small-tablet {
+            @media only screen and (min-width: 481px) and (max-width: 767px) {
+            @content;
+            }
+        }
+
+    
+        @mixin smartphone {
+            @media only screen and (min-width: 320px) and (max-width: 575px) {
+            @content;
+            }
+        }
+    
+        @mixin smartphone-landscape {
+        @media only screen 
+        and (min-width : 320px) 
+        and (max-width : 732px) 
+        and (orientation : landscape) { 
+        @content;
+        }
+        }
+
+
+
+  
+  
+  @mixin transition-fast() {
+    transition: all 0.05s ease-in-out;
+  }
+  @mixin transition-middle() {
+    transition: all 0.1s ease-in-out;
+  }
+  @mixin transition-slow() {
+    transition: all 0.2s ease-in-out;
+  }
+  @mixin transition-very-slow() {
+    transition: all 0.4s ease-in-out;
+  }
+  
+
+
+  $path--rel      : "/assets/imagenes";
+  /* Fondos de imagen */
+  @mixin background-image($img, $background-position, $bg-size) {
+    background-image: url('#{$path--rel}/#{$img}');
+    background-repeat: no-repeat;
+    background-position: $background-position;
+    background-size: $bg-size;
+} 
+
+/* Using
+@include background-image("header.png", right); 
+*/
+  
+  
+  
+  // Flexbox display
+  @mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+       -moz-box-flex: $values;
+        -webkit-flex: $values;
+          -ms-flex: $values;
+              flex: $values;
+  }
+  
+
+  @mixin flex-direction($direction) {
+    -webkit-flex-direction: $direction;
+       -moz-flex-direction: $direction;
+        -ms-flex-direction: $direction;
+            flex-direction: $direction;
+  }
+  
+
+  @mixin flex-wrap($wrap) {
+    -webkit-flex-wrap: $wrap;
+       -moz-flex-wrap: $wrap;
+        -ms-flex-wrap: $wrap;
+            flex-wrap: $wrap;
+  }
+  
+ 
+
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+       -moz-box-ordinal-group: $val;     
+             -ms-flex-order: $val;     
+              -webkit-order: $val;  
+                  order: $val;
+  }
+  
+
+  @mixin justify-content($justify) {
+    -webkit-justify-content: $justify;
+       -moz-justify-content: $justify;
+        -ms-justify-content: $justify;
+            justify-content: $justify;
+              -ms-flex-pack: $justify;
+  }
+  
+
+ 
+  @mixin align-items($align) {
+    -webkit-align-items: $align;
+       -moz-align-items: $align;
+        -ms-align-items: $align;
+            align-items: $align;
+  }
+  
+
+  @mixin flex-direction($direction) {
+    -webkit-flex-direction: $direction;
+       -moz-flex-direction: $direction;
+        -ms-flex-direction: $direction;
+            flex-direction: $direction;
+  }
+ 
+  
+  @mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+      background:darken($bg,8%);
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+  }
+
+  .btn {
+    color:white;
+    text-decoration:none;
+    border:none;
+    border-radius:0px!important;
+    &:focus {outline: none!important;box-shadow:none!important}
+   }
+
+   .btn-lg {
+    padding: 1.2rem 2rem;
+    @include smartphone {padding: .8rem 1.8rem;}
+   }
+    .btn-primario {
+        @include button-bg($primario);
+    }
+ 
+    .btn-secundario {
+        @include button-bg($secundario);
+    }
+    .btn-terciario {
+        @include button-bg($terciario);
+    }
+
+
+
+    @mixin overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba(8, 8, 8, 0.45);
+        left: 0;
+        right: 0;
+    }
+
+    .overlay {@include overlay}
+
+    @mixin rounded-i-wrap {
+        width: 0px;
+        height: 0px;
+        padding: 20px;
+        background:$secundario;
+        border-radius:50%;
+        text-align: center;
+        position:relative;
+        margin:0px 5px;
+        cursor: pointer;
+        @include transition-slow;
+        &:hover, &:focus {background:$primario}
+    }
+
+    @mixin rounded-icon {
+        color:white;
+        position:absolute;
+        left: 0%;
+        top: 25%;
+        right: 0%;
+        font-size:20px
+    }
+
+    .rounded-i-wrap {
+        @include rounded-i-wrap;
+        > i {@include rounded-icon}
+    
+    }
+
+
+
+    .breadcrumb {
+        position:relative;
+        padding:5rem 0rem;
+        border-radius:0px;
+        margin-bottom:0px;
+        @include smartphone {padding:2rem 0rem;}
+        @include background-image("pic_banner.jpg", center, cover);
+        color:white;
+        h3 {font-weight:300}
+        .container  {z-index:1}
+    }

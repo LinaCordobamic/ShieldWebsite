@@ -1,0 +1,14 @@
+@import './src/styles/shield/import.scss';
+
+.banner {
+    position:relative;
+    @include background-image("home-bg.jpg", center, cover);
+    padding:10rem 0rem;
+    @include tablet-down { padding:5rem 0rem;}
+    h1 {color:white}
+
+    video {
+    width:100%;
+    border:2px solid white
+    }
+}

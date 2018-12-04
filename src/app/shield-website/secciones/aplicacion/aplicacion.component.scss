@@ -1,0 +1,23 @@
+@import './src/styles/shield/import.scss';
+
+.aplicacion {
+    padding:3rem 0rem;
+    position:relative;
+    @include background-image("bg-app2.jpg", center, cover);
+    @include tablet-down {text-align: center}
+    h2 {color:white;text-transform: uppercase;margin-bottom:10px}
+    ul > li {color:white;}
+    .list-check {
+        li {@include flexbox();@include align-items(center);margin-bottom:10px;@include tablet-down {display:block}}
+        i {font-size:30px;margin-right:10px; color:$highlight;@include tablet-down{display:block;margin-right:0px} }
+    }
+
+    .img-app {
+        position: absolute;
+        top:0%;
+        @include desktop-down {width:250px}
+        @include tablet-down {position:relative;width:45%}
+
+    }
+
+}

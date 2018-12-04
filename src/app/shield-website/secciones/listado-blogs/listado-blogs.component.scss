@@ -1,0 +1,39 @@
+@import './src/styles/shield/import.scss';
+
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+
+.blogs {
+    padding:5rem 0rem;
+h2 {text-transform: uppercase;color:$primario;margin-bottom:3rem}
+.tarjeta-blogs {
+    @include tablet-down {margin-bottom:20px}
+    cursor: pointer;
+    @include transition-slow;
+    &:hover{box-shadow:0px 0px 10px #cccccc;transform: scale(1.01)}
+    figure {margin:0}
+    .text {
+        background:#f6f6f6;
+        padding:15px;
+        h3 {color:$negro;margin-bottom:10px;&:hover {text-decoration: underline}}
+        p {color:$terciario;text-transform: uppercase;font-weight:800}
+    }
+}
+
+}

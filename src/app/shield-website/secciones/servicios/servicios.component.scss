@@ -1,0 +1,102 @@
+@import './src/styles/shield/import.scss';
+
+
+.servicios {
+    position:relative
+}
+
+.wrap-servicio {
+    background:$primario;
+    padding:5rem 0rem;
+        .tarjeta-servicio {
+            position:relative; 
+            .contenido {
+                padding:70px 50px 30px 20px;
+                position: relative;
+                h3 {
+                    color:white;
+                    text-transform: uppercase;
+                    height:100px;
+                    @include tablet-down {height: 100px;}
+                    @include smartphone {height: auto;}
+                }
+                button {font-weight:400}
+                i {vertical-align: middle;margin-left:10px}
+                }
+           
+
+        }
+
+        .tarjeta-servicio.se1 {   @include background-image("se-1.jpg", center, cover)}
+        .tarjeta-servicio.se2 {   @include background-image("se-2.jpg", center, cover)}
+        .tarjeta-servicio.se3 {   @include background-image("se-3.jpg", center, cover)}
+        .tarjeta-servicio.se4 {   @include background-image("se-4.jpg", center, cover)}
+        .tarjeta-servicio.se5 {   @include background-image("se-5.jpg", center, cover)}
+        .tarjeta-servicio.se6 {   @include background-image("se-6.jpg", center, cover)}
+
+        .tarjeta-servicio.sf1 {   @include background-image("se-1.jpg", center, cover)}
+        .tarjeta-servicio.sf2 {   @include background-image("se-2.jpg", center, cover)}
+        .tarjeta-servicio.sf3 {   @include background-image("se-3.jpg", center, cover)}
+        .tarjeta-servicio.sf4 {   @include background-image("se-4.jpg", center, cover)}
+        .tarjeta-servicio.sf5 {   @include background-image("se-5.jpg", center, cover)}
+        .tarjeta-servicio.sf6 {   @include background-image("se-6.jpg", center, cover)}
+}
+
+
+.nav-tabs, .tab-container {
+    background:$primario;
+    border-bottom:none;
+    @include justify-content(center);
+
+    .nav-item, .tab {
+        position:relative;
+        top:-50px;
+        width:400px;
+        @include laptop-down {width:50%}
+        @include smartphone {width:100%}
+
+        .nav-link {
+            font-family: $font-secondary;
+            padding:40px;
+            background:white;
+            color:$negro;
+            margin:0px 10px;
+            border-radius:5px;
+            font-size:150%;
+            border:none;
+            text-align: center;
+            @include laptop-down {margin-bottom:20px}
+            @include smartphone {font-size:120%;  padding:20px;}
+        }
+
+        .nav-link:before {
+            content:url('/assets/imagenes/eye.svg');
+            width:80px;
+            height:80px;
+            display:block;
+            margin:0 auto;
+        }
+
+        .nav-link.active:before {
+            content:url('/assets/imagenes/eye-active.svg');
+        }
+
+        .nav-link.fisica:before {
+            content:url('/assets/imagenes/shield.svg');
+          
+        }
+
+        .nav-link.fisica.active:before {
+                content:url('/assets/imagenes/shield-active.svg');
+        }
+
+        .nav-link.active {
+            background:$secundario;
+            color:white
+        }
+
+        .nav-link.active.fisica {
+            background:$terciario;
+        }
+    }
+}

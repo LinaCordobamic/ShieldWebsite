@@ -1,0 +1,40 @@
+@import './src/styles/shield/import.scss';
+
+
+
+.detalle-blog {
+    padding:5rem 0rem;
+    p, li {text-align: justify;line-height: 1.8}
+    .blank_space.blog {
+     height:40px;@include tablet-down {height:20px}
+    }
+    h3 {margin-bottom:10px;}
+    .next, .prev {
+        @include transition-slow;
+        cursor: pointer;
+        padding:2rem 0rem;
+    }
+
+    .prev {
+        i {transform: rotate(45deg)!important;}
+    }
+
+    .next:hover, .prev:hover {
+       background:$primario;
+       h3, a, i {color:white!important}
+    }
+    .card-img-overlay {padding:10px 20px;}
+
+    .proyecto {
+        border:none;
+      background:$secundario;
+    }
+
+    .lista-servicios > li {
+        font-family:$font-secondary;
+        font-size:100%;
+        background:#f6f6f6;
+        padding:0px 5px;
+        margin-bottom:10px;
+    }
+}

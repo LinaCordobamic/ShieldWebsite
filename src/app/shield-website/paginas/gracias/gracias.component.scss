@@ -1,0 +1,11 @@
+@import './src/styles/shield/import.scss';
+
+
+.banner-gracias {
+    position:relative;
+    @include background-image("home-bg.jpg", center, cover);
+    padding:10rem 0rem;
+    @include tablet-down {padding:5rem 0rem;}
+    color:white;
+    h4 {font-weight:300}
+}

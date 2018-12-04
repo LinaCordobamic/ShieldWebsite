@@ -1,0 +1,65 @@
+@import './src/styles/shield/import.scss';
+
+.contacto {
+    padding:8em 0em;
+    .row {@include align-items(center)}
+    h2 {color:$secundario;text-transform: uppercase;margin-bottom:2rem;}
+    .alert {padding:0px;font-size:80%;color:$terciario;margin-bottom: 5px;}
+    .form-contacto {
+        text-align: left;
+        background: white;
+        @include laptop-down {text-align: center};
+        border-radius:10px;
+        .form-control:focus {box-shadow:none;border:none}
+        .form-control {
+            font-size:16px;
+            background-color:$fondo!important;
+            border:none;
+            height:50px;
+            border-radius:2px;
+        }
+        button {width:100%;}
+        .form-check {
+            @include flexbox();
+            @include align-items(center);
+            label {margin-left:2rem; text-align:left;}
+            label{font-size:80%}
+            a {color:$terciario;cursor:pointer;&:hover{text-decoration: underline}}
+        }
+    }
+
+    .box-contacto {
+        background:$terciario;
+        padding:30px;
+        color:white;
+        margin-top:3rem;
+        @include tablet-down {margin-top:20px}
+        .info {
+            @include flexbox();
+            @include align-items(center);
+            &:first-child {margin-bottom:10px}
+            .marker {
+                transform: scaleX(-1);
+                -moz-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                -ms-transform: scaleX(-1);
+            }
+            i {margin-right:10px;font-size:150%}
+            p {text-transform: uppercase; span {font-weight:600;display:block}}
+        }
+    }
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
