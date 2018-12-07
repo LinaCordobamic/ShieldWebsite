@@ -86,8 +86,10 @@
 }
 
 .navbar .nav-link.active {
-    color: $terciario;
+    color: $terciario!important;
   }
+
+  
 
 .navbar-nav {
  padding-left:6em;
@@ -135,6 +137,17 @@
 }
 
 
+  
+.fixed-top {
+    position: fixed;
+    top: 0;
+  z-index: 1;
+  box-shadow: 0px 8px 12px rgba(222, 222, 222, 0.32);
+  height:auto;
+  transition: all 0.3s ease;
+}
+
+
 
 
  /* sticky menu*/
@@ -178,16 +191,5 @@
     animation-name: fadeInDown;
   }
   
-  
-  
-  
-  .fixed-top {
-      position: fixed;
-      top: 0;
-    z-index: 1;
-    box-shadow: 0px 8px 12px rgba(222, 222, 222, 0.32);
-    height:auto;
-    transition: all 0.3s ease;
-  }
   
   

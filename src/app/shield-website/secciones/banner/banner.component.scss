@@ -2,7 +2,11 @@
 
 .banner {
     position:relative;
-    @include background-image("home-bg.jpg", center, cover);
+    background-image: url(/assets/imagenes/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
     padding:10rem 0rem;
     @include tablet-down { padding:5rem 0rem;}
     h1 {color:white}
