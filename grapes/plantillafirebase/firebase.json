@@ -1,0 +1,18 @@
+{
+  "hosting": {
+   
+    "target": "prueba-hosting",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+     "rewrites": [
+
+     { "source": "**", "function": "webServer/2rJq7ZNnxPpB3hRPlaP3"}
+    
+    
+   ]
+  }
+}

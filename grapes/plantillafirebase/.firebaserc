@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cms-mic": {
+      "hosting": {
+        "prueba-hosting": [
+          "prueba-hosting"
+        ]
+      }
+    }
+  }
+}

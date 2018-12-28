@@ -267,6 +267,7 @@ li {line-height: 1.8}
     box-shadow: 0px 5px 10px  #e2e2e2;
     position: relative;
     padding: 0 !important;
+    overflow: hidden;
   }
   @media (max-width: 992px) {
     .navbar-mic {
@@ -655,13 +656,14 @@ li {line-height: 1.8}
       padding: 20px;
     }
   }
-  .nav-tabs .nav-item .nav-link:before, .nav-tabs .tab .nav-link:before, .tab-container .nav-item .nav-link:before, .tab-container .tab .nav-link:before {
+   /*.nav-tabs .nav-item .nav-link:before, .nav-tabs .tab .nav-link:before, .tab-container .nav-item .nav-link:before, .tab-container .tab .nav-link:before {
     content: url("https://image.flaticon.com/icons/svg/1245/1245285.svg");
     width: 80px;
     height: 80px;
     display: block;
     margin: 0 auto;
   }
+ 
   .nav-tabs .nav-item .nav-link.active:before, .nav-tabs .tab .nav-link.active:before, .tab-container .nav-item .nav-link.active:before, .tab-container .tab .nav-link.active:before {
     content: url("https://image.flaticon.com/icons/svg/1245/1245285.svg");
   }
@@ -671,6 +673,7 @@ li {line-height: 1.8}
   .nav-tabs .nav-item .nav-link.fisica.active:before, .nav-tabs .tab .nav-link.fisica.active:before, .tab-container .nav-item .nav-link.fisica.active:before, .tab-container .tab .nav-link.fisica.active:before {
     content: url("https://image.flaticon.com/icons/svg/1245/1245285.svg");
   }
+  */
   .nav-tabs .nav-item .nav-link.active, .nav-tabs .tab .nav-link.active, .tab-container .nav-item .nav-link.active, .tab-container .tab .nav-link.active {
     background: #1F3E7E;
     color: white;
@@ -846,6 +849,8 @@ li {line-height: 1.8}
   .blogs .tarjeta-blogs {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   @media (max-width: 768px) {
     .blogs .tarjeta-blogs {
@@ -874,6 +879,28 @@ li {line-height: 1.8}
     color: #ad2620;
     text-transform: uppercase;
     font-weight: 800;
+  }
+
+  .blog .owl-dots {
+    text-align: center
+  }
+
+  .blog .owl-nav {
+    display:none
+  }
+
+  .blog .owl-dots .owl-dot {
+    border-radius: 30px;
+    padding: 5px;
+    border: none;
+    margin:0px 5px;
+  }
+
+  .blog .owl-dots .owl-dot.active,
+  .blog .owl-dots .owl-dot:focus,
+  .blog .owl-dots .owl-dot:hover {
+    background:#707070;
+    outline:none
   }
   
   /* CONTACTO */
@@ -1012,6 +1039,7 @@ li {line-height: 1.8}
     position: relative;
     color: white;
     padding-bottom: 1em;
+    overflow:hidden;
   }
   @media (max-width: 768px) {
     footer {

@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "target": "shield-security-services",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      { "source": "**", "function": "webServer/mPzNn6W4z1UiXoPU8063"}
+    ]
+  }
+}

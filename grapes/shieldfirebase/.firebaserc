@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cms-mic": {
+      "hosting": {
+        "shield-security-services": [
+          "shield-security-services"
+        ]
+      }
+    }
+  }
+}
